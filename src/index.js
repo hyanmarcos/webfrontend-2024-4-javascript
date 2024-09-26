@@ -19,13 +19,17 @@ if (metodoPagamento === `pix` || metodoPagamento === `dinheiro`) {
   const totalAPagar = valorTotal * 0.9;
   const contaDividida = totalAPagar / numeroPessoas;
   console.log(
-    `O total da conta fica em R$${totalAPagar} reais e dividido fica R$${contaDividida} reais por pessoa`
+    `O total da conta fica em R$${totalAPagar.toFixed(
+      2
+    )} reais e dividido fica R$${contaDividida.toFixed(2)} reais por pessoa`
   );
 } else if (metodoPagamento == `cartao` || metodoPagamento == `cartão`) {
   const totalSemDesconto = valorTotal;
   contaDividida = totalSemDesconto / numeroPessoas;
   console.log(
-    `O total da conta fica em R$${totalSemDesconto} reais e dividido fica R$${contaDividida} reais por pessoa`
+    `O total da conta fica em R$${totalSemDesconto.toFixed(
+      2
+    )} reais e dividido fica R$${contaDividida.toFixed(2)} reais por pessoa`
   );
 } else {
   console.log(
